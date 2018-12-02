@@ -33,9 +33,7 @@ class PostsNew extends Component {
     render(){
     	
     	   const { handleSubmit } = this.props;
-
         return(
-
         <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         	<Field
         		label="Title for Post"
