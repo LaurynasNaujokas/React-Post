@@ -6,12 +6,7 @@ export default function (state ={},action){
     	case DELETE_POST:
     		return _.omit(state, action.payload);
     	case FETCH_POST:
-    	//ES5
-    		/*const post = action.payload.data;
-    		const newState = { ...state,  };
-    		newState[post.id] = post;
-    		return newState;*/
-    	//ES6
+    	
     	return {...state, [action.payload.data.id]: action.payload.data};
 
         case FETCH_POSTS:
